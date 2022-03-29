@@ -75,7 +75,7 @@ input{
 }
 
 button { 
-  width: 100%;
+  width: 20vmin;
 	height: 7.5vmin;
 	border-radius: 0.5rem;
   border: none;
