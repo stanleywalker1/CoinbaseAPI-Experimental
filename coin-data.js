@@ -1,12 +1,22 @@
+const output = document.getElementById('output');
 
-
-const output = document.querySelector('#output');
-
-
+//  ********** Helper Functions **********
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomColor(){
+  var palettes = [
+    ['100', '20', '180'],
+    ['200', '80', '80'],
+    ['180', '100', '90']
+  ];
+  var randomPalette = palettes[Math.floor(Math.random() * palettes.length)];
+  var colorString = "rgb("+ randomPalette[0] + "," + randomPalette[1] + "," + randomPalette[2] + ")";
+
+  return colorString;
 }
 
 // ********** Accessing the coinbase price data **********
@@ -44,36 +54,9 @@ accessData = async () => {
       circle.setAttributeNS(null, "cx", getRandomInt(0, output.clientWidth));
       circle.setAttributeNS(null, "cy", getRandomInt(0, output.clientHeight));
       circle.setAttributeNS(null, "r",  20);
-      circle.setAttributeNS(null, "fill", "pink");
+      circle.setAttributeNS(null, "fill", randomColor());
       svg.appendChild(circle);
+      
   }
 
-
-
-  // ********** Accessing the weather data, incase we want a sun/moon in the scene or someting  **********
-
-  // accessWeatherData = async () => {
-  //   let url = 'https://api.openweathermap.org/data/2.5/weather?q=New+York&units=imperial&appid=0a5f4c023e25d8e825de810cbf664116'
-  //   let response = await fetch(url);
-
-  //   if (response.ok){
-  //     let json = await response.json();
-  //     weatherData(json);
-  //   } else {
-  //     console.log('Error: ' + response.status);
-  //   }
-  // }
-
-  // weatherData = (response) => {
-  //   let sunrise = response.sys.sunrise;
-  //   let currentTime = Math.floor(Date.now() / 1000);
-  //   console.log(sunrise);
-
-  //   let sunset = response.sys.sunset;
-  //   console.log(sunset);
-  // }
-
-
-
   document.querySelector('button').addEventListener('click', accessData);
-  //document.querySelector('#weather').addEventListener('click', accessWeatherData);
