@@ -14,10 +14,17 @@
 
     <h1 style="font-size: 10vmin; ">Coinster</h1>
     <div id="application">
-        <input type="text" id="myText" style="text-transform:uppercase;" placeholder="enter a coin">
-        <button type="button">Fetch Price</button>
-        <button id="news" type="button">News</button>
-
+        <div id="usr_input">
+            <input type="text" id="myText" style="text-transform:uppercase;" placeholder="enter a coin">
+            <button type="button">Fetch Price</button>
+            <button id="news" type="button">News</button>
+        </div>
+       
+        <div id="output">
+            <h2>Output</h2>
+            <p id="price"></p>
+            <p id="news-output"></p>
+        </div>
     </div>
 </body>
 <script src="coin-data.js"></script>

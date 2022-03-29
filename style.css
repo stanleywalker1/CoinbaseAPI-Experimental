@@ -26,6 +26,8 @@ body {
 .application {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,6 +40,21 @@ body {
 	cursor: pointer;
   background: var(--greyLight-1);
   color: var(--primary);
+}
+
+#usr_input {
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid var(--greyLight-2);
+  background: transparent;
+  color: var(--primary);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 input{
@@ -67,6 +84,22 @@ button {
   background: var(--greyLight-1);
   color: var(--primary);
   font-size: 2.5vmin;
+}
 
+#output {
+  width: 100vmin;
+  height: 20vmin;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  font-size: 3vmin;
+  font-weight: bold;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: var(--inner-shadow);
+  background: var(--greyLight-1);
+  color: var(--primary);
+  caret-color: var(--primary);
+  text-align: center;
 }
 
