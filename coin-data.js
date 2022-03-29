@@ -52,26 +52,26 @@ accessData = async () => {
 
   // ********** Accessing the weather data, incase we want a sun/moon in the scene or someting  **********
 
-  accessWeatherData = async () => {
-    let url = 'https://api.openweathermap.org/data/2.5/weather?q=New+York&units=imperial&appid=0a5f4c023e25d8e825de810cbf664116'
-    let response = await fetch(url);
+  // accessWeatherData = async () => {
+  //   let url = 'https://api.openweathermap.org/data/2.5/weather?q=New+York&units=imperial&appid=0a5f4c023e25d8e825de810cbf664116'
+  //   let response = await fetch(url);
 
-    if (response.ok){
-      let json = await response.json();
-      weatherData(json);
-    } else {
-      console.log('Error: ' + response.status);
-    }
-  }
+  //   if (response.ok){
+  //     let json = await response.json();
+  //     weatherData(json);
+  //   } else {
+  //     console.log('Error: ' + response.status);
+  //   }
+  // }
 
-  weatherData = (response) => {
-    let sunrise = response.sys.sunrise;
-    let currentTime = Math.floor(Date.now() / 1000);
-    console.log(sunrise);
+  // weatherData = (response) => {
+  //   let sunrise = response.sys.sunrise;
+  //   let currentTime = Math.floor(Date.now() / 1000);
+  //   console.log(sunrise);
 
-    let sunset = response.sys.sunset;
-    console.log(sunset);
-  }
+  //   let sunset = response.sys.sunset;
+  //   console.log(sunset);
+  // }
 
 
 
