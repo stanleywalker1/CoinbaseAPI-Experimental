@@ -104,3 +104,12 @@ button {
   text-align: center;
 }
 
+#footer {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  clear: both;
+  /* height: 70px; */
+  text-align: center;
+}
+
