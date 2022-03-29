@@ -26,6 +26,13 @@ accessData = async () => {
       // let priceVar = 'blur(' + price + 'px)';
       // let priceObj = document.querySelector('.obj');
       // priceObj.style.filter = priceVar;
+
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute('style', 'border: 1px solid black');
+    svg.setAttribute('width', price/10);
+    svg.setAttribute('height', price/10);
+    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+    document.body.appendChild(svg);
   }
 
 
