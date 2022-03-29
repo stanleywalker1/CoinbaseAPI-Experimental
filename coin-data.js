@@ -1,3 +1,14 @@
+
+
+const output = document.querySelector('#output');
+
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // ********** Accessing the coinbase price data **********
 
 accessData = async () => {
@@ -26,13 +37,15 @@ accessData = async () => {
       // let priceVar = 'blur(' + price + 'px)';
       // let priceObj = document.querySelector('.obj');
       // priceObj.style.filter = priceVar;
-
-    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute('style', 'border: 1px solid black');
-    svg.setAttribute('width', price/10);
-    svg.setAttribute('height', price/10);
-    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-    document.body.appendChild(svg);
+    
+      var svgn = "http://www.w3.org/2000/svg";
+      var svg = document.getElementById('svg');
+      var circle = document.createElementNS(svgn, "circle");
+      circle.setAttributeNS(null, "cx", getRandomInt(0, output.clientWidth));
+      circle.setAttributeNS(null, "cy", getRandomInt(0, output.clientHeight));
+      circle.setAttributeNS(null, "r",  20);
+      circle.setAttributeNS(null, "fill", "pink");
+      svg.appendChild(circle);
   }
 
 
@@ -63,4 +76,4 @@ accessData = async () => {
 
 
   document.querySelector('button').addEventListener('click', accessData);
-  document.querySelector('#weather').addEventListener('click', accessWeatherData);
+  //document.querySelector('#weather').addEventListener('click', accessWeatherData);
