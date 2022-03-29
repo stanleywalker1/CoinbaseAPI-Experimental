@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Coinbase API</title>
+
 </head>
+
 <body>
-    Symbol:<input type="text" id="myText" style="text-transform:uppercase" value="enter a coin">
-    <button type="button">Fetch Price</button>
-    <button id="weather" type="button">weather</button>
-    <p></p>
+
+    <h1 style="font-size: 10vmin; ">Coinster</h1>
+    <div id="application">
+        <input type="text" id="myText" style="text-transform:uppercase;" placeholder="enter a coin">
+        <button type="button">Fetch Price</button>
+        <button id="weather" type="button">weather</button>
+
+        <p></p>
+    </div>
 </body>
 <script src="coin-data.js"></script>
+
 </html>
