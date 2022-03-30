@@ -8,11 +8,7 @@ function getRandomInt(min, max) {
 }
 
 function randomColor() {
-  var palettes = [
-    ["224", "195" ,"252"],
-    ["200", "80", "80"],
-    ["180", "100", "90"],
-    
+  var palettes = [   
     ["117", "123", "200"],
     ["129", "135", "220"],
     ["142", "148", "242"],
