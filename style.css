@@ -40,7 +40,7 @@ body {
 	margin-top: 30px;
   background: var(--greyLight-1);
   color: var(--primary);
-  width: 60vmin;
+  width: 70vmin;
   /* height: 30vmin; */
 }
 
@@ -73,7 +73,7 @@ input{
 }
 
 button { 
-  width: 30vmin;
+  width: 20vmin;
 	height: 7.5vmin;
 	border-radius: 0.5rem;
   border: none;
@@ -92,9 +92,8 @@ button {
   width: 100vmin;
   height: 40vmin;
 
-  border: none;
+  border: 4px solid var(--greyLight-2);
 	border-radius: 1rem;
-	outline: none;
 	box-shadow: var(--inner-shadow);
 	background: var(--greyLight-1);
 	color: var(--primary);
@@ -111,7 +110,7 @@ button {
   /* position: fixed; */
   clear: both;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: var(--greyLight-1);
 }
 
@@ -119,7 +118,7 @@ svg {
   width: 100%;
   height: 100%;
   fill: var(--primary);
-  border-radius: 1rem;
+  border-radius: 0.9rem;
 }
 
 .top_part {
@@ -132,15 +131,10 @@ svg {
 }
 
 #abt_project { 
-  border: none;
-  border-radius: 1rem;
-	box-shadow: var(--shadow);
-	margin-left: 30px;
-  margin-top: 10px;
-  background: var(--greyLight-1);
-  color: var(--primary);
-  width: 15vmin;
-  padding: px;
+  width: 12vmin;
+  height: 20vmin;
+  margin-left: 15px;
+  margin-top: 40px;
 }
 
 
