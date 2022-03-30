@@ -9,10 +9,11 @@ function getRandomInt(min, max) {
 
 function randomColor() {
   var palettes = [
-    ["100", "20", "180"],
+    ["224", "195" ,"252"],
     ["200", "80", "80"],
     ["180", "100", "90"],
   ];
+  
   var randomPalette = palettes[Math.floor(Math.random() * palettes.length)];
   var colorString =
     "rgb(" +
@@ -22,6 +23,8 @@ function randomColor() {
     "," +
     randomPalette[2] +
     ")";
+
+
 
   return colorString;
 }
