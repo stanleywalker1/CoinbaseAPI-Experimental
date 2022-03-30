@@ -116,10 +116,3 @@ document.getElementById("myText").addEventListener("keyup", function (event) {
 }
 );
 
-// make button with id="abt_project" display alert message when clicked
-document.getElementById("abt_project").addEventListener("click", function () {
-  alert(
-    "This project is a web app that displays the price of a cryptocurrency in USD, and generates a random circle proportionally sized to the price of the cryptocurrency.\r\n \r\n hint: try typing in the name of a cryptocurrency to see how it works."
-  );
-}
-);
