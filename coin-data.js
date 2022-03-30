@@ -47,14 +47,34 @@ accessData = async () => {
       // let priceVar = 'blur(' + price + 'px)';
       // let priceObj = document.querySelector('.obj');
       // priceObj.style.filter = priceVar;
+      let x = getRandomInt(0, output.clientWidth);
+      let y = getRandomInt(0, output.clientHeight);
+      let x1 = 0;
+      let y1 = 50000;
+      let x2 = 3;
+      let y2 = 150;
+
     
       var svgn = "http://www.w3.org/2000/svg";
       var svg = document.getElementById('svg');
       var circle = document.createElementNS(svgn, "circle");
-      circle.setAttributeNS(null, "cx", getRandomInt(0, output.clientWidth));
-      circle.setAttributeNS(null, "cy", getRandomInt(0, output.clientHeight));
-      circle.setAttributeNS(null, "r",  20);
+      circle.setAttributeNS(null, "cx", x);
+      circle.setAttributeNS(null, "cy", y);
+      const map = (price, x1, y1, x2, y2) => (price - x1) * (y2 - x2) / (y1 - x1) + x2;
+      console.log(map);
+      circle.setAttributeNS(null, "r",  map(price, x1, y1, x2, y2));
       circle.setAttributeNS(null, "fill", randomColor());
+
+      // var svgNS = "http://www.w3.org/2000/svg";
+      // var newText = document.createElementNS(svgNS,"text");
+      // newText.setAttributeNS(null,"x",x);     
+      // newText.setAttributeNS(null,"y",y); 
+      // newText.setAttributeNS(null,"font-size","100");
+      
+      // var textNode = document.createTextNode(val);
+      // newText.appendChild(textNode);
+      // document.getElementById("myText").appendChild(newText);
+
       svg.appendChild(circle);
       
   }
