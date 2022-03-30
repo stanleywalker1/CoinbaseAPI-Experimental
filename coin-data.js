@@ -39,17 +39,17 @@ accessData = async () => {
     coinbaseData(json);
   } else {
     console.log("Error: " + response.status);
-    document.querySelector("p").textContent =
-      "Sorry that coin data is not avalible";
+    document.getElementById("price_value").textContent = "Sorry that coin data is not avalible";
   }
 };
 
 coinbaseData = (response) => {
+  let sym = document.getElementById("myText").value;
   let price = response.data.amount;
   if (price >= 100) {
-    document.querySelector("p").textContent = Math.round(price);
+    document.getElementById("price_value").textContent =  sym + ": $" + Math.round(price) ;
   } else if (price < 100) {
-    document.querySelector("p").textContent = price;
+    document.getElementById("price_value").textContent = sym + ": $" + price;
   }
   // apply CSS blur filter to an object
   // let priceVar = 'blur(' + price + 'px)';
@@ -60,7 +60,7 @@ coinbaseData = (response) => {
   let x1 = 0;
   let y1 = 50000;
   let x2 = 3;
-  let y2 = 150;
+  let y2 = 100;
 
   var svgn = "http://www.w3.org/2000/svg";
   var svg = document.getElementById("svg");
@@ -73,19 +73,38 @@ coinbaseData = (response) => {
   circle.setAttributeNS(null, "r", map(price, x1, y1, x2, y2));
   circle.setAttributeNS(null, "fill", randomColor());
 
-  // var svgNS = "http://www.w3.org/2000/svg";
-  // var newText = document.createElementNS(svgNS,"text");
-  // newText.setAttributeNS(null,"x",x);
-  // newText.setAttributeNS(null,"y",y);
-  // newText.setAttributeNS(null,"font-size","100");
+  // put the value of "sym" as text in the center of each circle created
+  // make text proportional to the radius of the circle
 
-  // var textNode = document.createTextNode(val);
-  // newText.appendChild(textNode);
-  // document.getElementById("myText").appendChild(newText);
+  var text = document.createElementNS(svgn, "text");
+  text.setAttributeNS(null, "x", x);
+  text.setAttributeNS(null, "y", y);
+  text.setAttributeNS(null, "fill", "white");
+  text.setAttributeNS(null, "font-family", "Arial");
+  text.setAttributeNS(null, "text-anchor", "middle");
+  text.textContent = document.getElementById("myText").value;
+  // set font size proportional to the radius of the circle
+  var fontSize = map(price, x1, y1, x2, y2) / 2;
+  text.setAttributeNS(null, "font-size", fontSize);
 
+  //make text uppercase
+  text.textContent = text.textContent.toUpperCase();
+
+  // add a black border to the circle
+  circle.setAttributeNS(null, "stroke", "black");
+  circle.setAttributeNS(null, "stroke-width", "1");
+
+  //add the circle to the svg
   svg.appendChild(circle);
-};
 
+  //add the text to the svg
+  svg.appendChild(text);
+
+  //define fadeout animation
+
+};
+  
+// ********** Event Listeners **********
 document.querySelector("button").addEventListener("click", accessData);
 
 // make the button click when enter key is pressed
@@ -96,4 +115,5 @@ document.getElementById("myText").addEventListener("keyup", function (event) {
   }
 }
 );
+
 
