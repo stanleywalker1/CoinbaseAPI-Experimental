@@ -11,29 +11,44 @@
 </head>
 
 <body>
+    <div id="webapp">
+        <div class="top_part">
 
-    <div class="top_part">
+            <div id="application">
+                <div id="title_box">
+                    <h1 style="font-size: 5vmin; font-weight: bold;margin:10px;">Coin Visualizer</h1>
+                </div>
+                <div id="usr_input">
+                    <input type="text" id="myText" style="text-transform:uppercase;" placeholder="enter a coin">
+                    <button id="fetch_price" type="button">Fetch Price</button>
+                </div>
+            </div>
 
-        <div id="application">
-            <div id="title_box">
-                <h1 style="font-size: 5vmin; font-weight: bold;margin:10px;">Coin Visualizer</h1>
-            </div>
-            <div id="usr_input">
-                <input type="text" id="myText" style="text-transform:uppercase;" placeholder="enter a coin">
-                <button id="fetch_price" type="button">Fetch Price</button>
-            </div>
+            <!-- <button id="abt_project">About Project</button> -->
         </div>
 
-        <button id="abt_project">About Project</button>
+        <p id="price_value" style="font-size:2.5vmin"></p>
+
+        <div id="output">
+            <svg id="svg"></svg>
+        </div>
+        <div id="footer">
+            <p style="font-size:2.5vmin">Made with ❤️ by Stanley and Thomas <br> Drawing on The Web 2022 - NYU</p>
+        </div>
     </div>
 
-    <p id="price_value"></p>
+    <div id="about">
+        This project is a web app that displays the price of a cryptocurrency in USD, and generates a random circle proportionally sized to the price of the cryptocurrency. 
+        
+        <br><br> hint: try typing in the name of a cryptocurrency to
+        see how it works.
 
-    <div id="output">
-        <svg id="svg"></svg>
-    </div>
-    <div id="footer">
-        <p>Made with ❤️ by Stanley and Thomas <br> Drawing on The Web 2022 - NYU</p>
+        <br><br> Coinbase API link: <u>https://developers.
+        coinbase.com/api/v2
+        #prices</u>
+        
+
+
     </div>
 
 </body>
