@@ -69,8 +69,8 @@ coinbaseData = (response) => {
   let y = getRandomInt(0, output.clientHeight);
   let x1 = 0;
   let y1 = 50000;
-  let x2 = 3;
-  let y2 = 100;
+  let x2 = 40;
+  let y2 = 90;
 
   var svgn = "http://www.w3.org/2000/svg";
   var svg = document.getElementById("svg");

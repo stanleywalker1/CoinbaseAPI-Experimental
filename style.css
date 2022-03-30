@@ -122,13 +122,17 @@ button {
   text-align: center;
   /* overflow: hidden; */
   background: var(--greyLight-1);
+  color: gray;
 }
 
 svg {
   width: 100%;
   height: 100%;
   fill: var(--primary);
+  fill-opacity: 0.8;
   border-radius: 0.9rem;
+  /* animation: ease-in 5s;
+  animation-duration: 5s; */
 }
 
 .top_part {
