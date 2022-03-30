@@ -131,7 +131,7 @@ svg {
   flex-direction: row;
 }
 
-.info { 
+#abt_project { 
   border: none;
   border-radius: 1rem;
 	box-shadow: var(--shadow);

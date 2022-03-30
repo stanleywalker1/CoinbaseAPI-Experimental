@@ -116,6 +116,10 @@ document.getElementById("myText").addEventListener("keyup", function (event) {
 }
 );
 
-// make 
+// make button with id="abt_project" give an alert when pressed and
+document.getElementById("abt_project").addEventListener("click", function () {
+  
 
 
+ }
+);
