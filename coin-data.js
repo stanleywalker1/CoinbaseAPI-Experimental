@@ -105,15 +105,17 @@ coinbaseData = (response) => {
 };
   
 // ********** Event Listeners **********
-document.querySelector("button").addEventListener("click", accessData);
+document.getElementById("fetch_price").addEventListener("click", accessData);
 
 // make the button click when enter key is pressed
 document.getElementById("myText").addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
-    document.querySelector("button").click();
+    document.getElementById("fetch_price").click();
   }
 }
 );
+
+// make 
 
 
